@@ -1,0 +1,25 @@
+{
+  "name": "phpner/test-date-prime",
+  "autoload": {
+    "psr-4": {
+      "Phpner\\TestDatePrime\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Alex",
+      "email": "phpner@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "symfony/dotenv": "^5.4",
+    "predis/predis": "^1.1",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^5.4",
+    "friendsofphp/php-cs-fixer": "^3.8",
+    "ext-xhprof": "*"
+  }
+}

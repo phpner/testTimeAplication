@@ -3,6 +3,7 @@
 namespace Phpner\TestDatePrime;
 
 use Exception;
+use Phpner\TestDatePrime\Libs\Storage\RedisConnection;
 use Phpner\TestDatePrime\Libs\Storage\Storage;
 
 class RedisTest extends TestAbstract
@@ -14,7 +15,7 @@ class RedisTest extends TestAbstract
      */
     public function makeTest(): array
     {
-        $redis = Storage::connect('redis');
+        $redis = RedisConnection::getConnect();
 
         $this->timeQueryStart = microtime(true);
 

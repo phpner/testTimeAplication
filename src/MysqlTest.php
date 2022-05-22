@@ -3,7 +3,7 @@
 namespace Phpner\TestDatePrime;
 
 use Exception;
-use Phpner\TestDatePrime\Libs\Storage\Storage;
+use Phpner\TestDatePrime\Libs\Storage\PdoConnection;
 
 class MysqlTest extends TestAbstract
 {
@@ -13,7 +13,7 @@ class MysqlTest extends TestAbstract
      */
     public function makeTest(): array
     {
-        $db = Storage::connect('mysql');
+        $db = PdoConnection::getConnect();
 
         try {
             $db->beginTransaction();
